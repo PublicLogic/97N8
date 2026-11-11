@@ -1,40 +1,41 @@
-# 97N8 — Exploring What's Next for Gardner
+# Nate Boudreau — Gardner
 
-A complete, mobile-first exploratory website for Nathan R. (Nate) Boudreau, developed from the original Red Sky Associates campaign material and visual language.
+This repository is the source for Nate Boudreau's personal exploratory website about a possible return to elected service in Gardner, Massachusetts. He is **considering both Mayor and City Council**, but **has not chosen either office or announced a candidacy**.
 
-**Nate is considering both Mayor and City Council in Gardner. Neither office is selected. This is not a candidacy announcement.**
+## Site structure
 
-## Design
+This is a **real five-page website**, not a one-page campaign landing page:
 
-- Red Sky campaign visual cues: navy/red/white, bold NATE BOUDREAU mark, Montserrat typography, original portrait, and direct language.
-- Original material about Gardner roots, five terms representing Ward 3, municipal management experience, and the phrase "Answers that show up in budgets, not speeches."
-- Updated for a possible return to Gardner municipal government, not a 2026 state legislative run.
-- Full sections: intro, story, public-service record, local issue questions, two equal exploratory paths, contact, and FAQ.
-- Responsive layout, accessible mobile navigation, semantic content, reduced-motion CSS, no third-party JavaScript, no data collection, and no donation integration.
+- `/` — Home and a note about why Nate is considering a return
+- `/about/` — Background and personal story
+- `/record/` — Gardner City Council and municipal administration record
+- `/issues/` — Substantive municipal issues and views
+- `/contact/` — Contact information and an honest description of current status
 
-## Local preview
+All pages have independent titles, content, URL routes and navigation.
 
-Open index.html in a browser or run:
+## Design and editorial sources
 
-    python3 -m http.server 8000
+The visual style and the substance are drawn from the prior Red Sky Associates campaign site and accompanying archived writing. This retains the navy, red, bold Boudreau wordmark, Montserrat, the original portrait, the earlier campaign motto "Courage to Change. Experience to Lead.", and the line "Answers that show up in budgets, not speeches."
 
-## Deploy
+The copy focuses on verified public-service experience and issues; it is not a declaration for Mayor or City Council. The old state legislative campaign's endorsements, election dates, fundraising CTAs, volunteer recruitment and campaign-specific promises were intentionally not brought forward.
 
-Import PublicLogic/97N8 into Vercel, select the Other framework preset with repository root at . and no build command. The app is plain HTML/CSS/JS and requires no environment variables.
+## Preview
 
-## Before public promotion
+The site is static HTML/CSS/JS with no package install or build process. It can run on Vercel as a static site or locally from a static server:
 
-- Confirm that nate@boudreauforrep.org remains the right contact address.
-- Review OCPF reporting and any campaign-communication identification requirements for municipal office. Exploratory language on a website does not create a separate formal OCPF exploratory committee category.
-- Confirm office eligibility if a candidacy is ultimately chosen.
-- Proofread the record and dates against the earlier campaign material.
-- The site is not affiliated with the City of Gardner. It requests no donations or volunteer commitments.
+```sh
+python3 -m http.server 8000
+```
 
-## Files
+See `index.html`, `about/index.html`, `record/index.html`, `issues/index.html`, and `contact/index.html`. The shared styles and responsive navigation are in `assets/`.
 
-- index.html: all content and page structure
-- assets/site.css: complete responsive styling
-- assets/site.js: accessible mobile menu behavior
-- assets/portrait.jpg: original campaign portrait
-- assets/favicon.svg: small N monogram
-- vercel.json, robots.txt: static-host configuration
+## Editorial and campaign checks before public launch
+
+- Confirm that `nate@boudreauforrep.org` is still the preferred public email.
+- Verify public service dates and descriptions.
+- Review the appropriate OCPF communication requirements before a public campaign release.
+- Do not confuse the current exploratory status with an official candidacy or a separate state-recognized exploratory committee.
+- This website is not affiliated with the City of Gardner.
+
+There are no donation links, volunteer collection forms, mailing-list forms, analytics, or fabricated testimonials.

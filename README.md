@@ -1,40 +1,30 @@
-# 97N8 — Exploring What's Next for Gardner
+# Nate Boudreau: Exploring What's Next for Gardner
 
-A complete, mobile-first exploratory website for Nathan R. (Nate) Boudreau, developed from the original Red Sky Associates campaign material and visual language.
+Static, mobile-first site for Nate Boudreau's exploration of a run for Mayor or City Council in Gardner, Massachusetts.
 
-**Nate is considering both Mayor and City Council in Gardner. Neither office is selected. This is not a candidacy announcement.**
+## What's here
 
-## Design
+- `index.html`: all page content
+- `assets/site.css`: styles
+- `assets/site.js`: mobile menu and the email writer on the contact form (nothing is stored or sent from the page)
+- `assets/fonts/`: Montserrat 400, 700 and 900, self-hosted (SIL Open Font License, see `OFL.txt`)
+- `assets/portrait.jpg`, `assets/og-image.jpg` (1200×630 link preview), `assets/favicon.svg`
+- `vercel.json`: security headers, including a Content Security Policy that allows only this site's own files
 
-- Red Sky campaign visual cues: navy/red/white, bold NATE BOUDREAU mark, Montserrat typography, original portrait, and direct language.
-- Original material about Gardner roots, five terms representing Ward 3, municipal management experience, and the phrase "Answers that show up in budgets, not speeches."
-- Updated for a possible return to Gardner municipal government, not a 2026 state legislative run.
-- Full sections: intro, story, public-service record, local issue questions, two equal exploratory paths, contact, and FAQ.
-- Responsive layout, accessible mobile navigation, semantic content, reduced-motion CSS, no third-party JavaScript, no data collection, and no donation integration.
+No third-party scripts, fonts, trackers or analytics. No build step.
 
-## Local preview
-
-Open index.html in a browser or run:
+## Preview locally
 
     python3 -m http.server 8000
 
 ## Deploy
 
-Import PublicLogic/97N8 into Vercel, select the Other framework preset with repository root at . and no build command. The app is plain HTML/CSS/JS and requires no environment variables.
+Vercel, "Other" framework preset, root directory `.`, no build command, no environment variables.
 
-## Before public promotion
+## Updating the numbers
 
-- Confirm that nate@boudreauforrep.org remains the right contact address.
-- Review OCPF reporting and any campaign-communication identification requirements for municipal office. Exploratory language on a website does not create a separate formal OCPF exploratory committee category.
-- Confirm office eligibility if a candidacy is ultimately chosen.
-- Proofread the record and dates against the earlier campaign material.
-- The site is not affiliated with the City of Gardner. It requests no donations or volunteer commitments.
+The budget and state-aid figures are a dated snapshot ("Pulled November 11, 2026" in the Numbers section). When you update a figure, update its row, its footnote, the source in the footer list and the date pill together.
 
-## Files
+## Once a custom domain is attached
 
-- index.html: all content and page structure
-- assets/site.css: complete responsive styling
-- assets/site.js: accessible mobile menu behavior
-- assets/portrait.jpg: original campaign portrait
-- assets/favicon.svg: small N monogram
-- vercel.json, robots.txt: static-host configuration
+Change the `og:image` meta tag in `index.html` to the full address (for example `https://example.com/assets/og-image.jpg`). Facebook and text-message previews need the full URL.
